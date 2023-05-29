@@ -1,0 +1,39 @@
+# projects
+My projects from 100 Days
+import turtle
+
+
+word='______'
+my_word='python'
+
+turtle.setup(width=300, height=400)
+# turtle.setx(80)
+# turtle.setx(30)
+turtle_step1=[
+turtle.right(90),
+turtle.forward(25),
+turtle.right(90),
+turtle.forward(75),
+turtle.right(90),
+turtle.forward(25),
+turtle.right(90),
+turtle.forward(75),
+turtle.back(75),
+turtle.left(90),
+turtle.forward(125),
+turtle.right(90),
+turtle.forward(50),
+turtle.right(90),
+turtle.forward(25),
+turtle.right(90)]
+print(f'Hi, Here is the word {word}, as you see there are {len(word)} letters. Let see can you change your future or not.')
+
+letter=input( 'Input your letter ')
+if letter in my_word:
+    print('cool')
+else:
+    turtle_step1 = turtle_step1.append(turtle.circle(10))
+    print('looser!')
+
+    # turtle_step1=turtle_step1.append(turtle.left(90))
+    # turtle_step1=turtle_step1.append(turtle.goto(-25,75))
