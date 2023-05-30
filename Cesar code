@@ -1,0 +1,29 @@
+# projects
+#My projects from 100 Days
+import string
+
+def encryption_code(word,shift):
+
+    encryption_word=[]
+    for i in word:
+        if i in code:
+            encryption_word.append(code[code.index(i)+shift])
+    return encryption_word
+   # print(f'there is your code {"".join(encryption_word)}')
+
+def decryption_code(encryption_word,shift):
+    deword=[]
+    for i in encryption_word:
+        if i in code:
+            deword.append(code[code.index(i)-shift])
+    return deword
+
+word=input('input word: ').lower()
+shift=int(input('input number no more 41: '))
+if shift >=41:
+    shift=int(input('Your shift is more than 41. Input again less'))
+shift=5
+code=string.ascii_lowercase+string.digits
+print(f'your secret code is {"".join(encryption_code(word,shift))}')
+encryption_word="".join(encryption_code(word,shift))
+print(f'your origin word was {"".join(decryption_code(encryption_word,shift))}')
